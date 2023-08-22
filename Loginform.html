@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <style>
+      /* Add some basic styling for the form */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+
+        padding-top: 100px;
+      }
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 0px solid #ccc;
+        background-color: #f2f2f2;
+      }
+      h2 {
+        text-align: center;
+      }
+      .input-container {
+        margin-bottom: 15px;
+      }
+      .input-container label {
+        display: block;
+        font-weight: bold;
+      }
+      .input-container input {
+        width: 93%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+      }
+      .input-container1 input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="login.php" method="POST">
+        <div class="input-container">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-container">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="input-container1">
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<div class="second-txt">
+  <p>LEE WebPage !!!</p>
+</div>

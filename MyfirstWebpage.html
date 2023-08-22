@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murali Website</title>
+    <style>
+      .gfg {
+        margin: 0%;
+        position: relative;
+      }
+
+      .first-txt {
+        position: absolute;
+        top: 5px;
+        right: 85px;
+        color: rgb(247, 245, 245);
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .second-txt{
+        position: absolute;
+        top: -50px;
+        left: 20px;
+        color: rgb(16 204 22 / 80%);
+
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+        font-size: 4.1em;
+        
+
+        
+      }
+
+      .identifier{
+        position: absolute;
+        top: 50px;
+        left: 577px;
+        color: rgba(46, 15, 157, 0.974);
+
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+        font-size: 2.7em;
+        text-align: center;
+        
+        text-shadow: 5px 5px 10px #4d4545;
+        
+      }
+
+      .container{
+        position: absolute;
+        top: 300px;
+        left: 620px;
+        color: rgba(6, 3, 20, 0.974);
+
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+        font-size: 2.3em;
+        text-align: center;
+        border: none;
+        font-size: 40px;
+       
+        
+      }
+      a:link {
+        color: rgb(246, 246, 246);
+        text-decoration: none;
+      }
+      a:visited {
+        color: #f8f8f8;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #090b09;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #2d9cb7;
+      }
+
+      p.header { 
+        background-color: rgb(70 67 70);
+        padding-top: 15px;  
+        padding-right: 10px;  
+        padding-bottom: 50px;  
+        padding-left: 100px;  
+      } 
+      
+      .btn{
+        background-color: rgb(30, 175, 56);
+        color: rgba(252, 252, 252, 0.974);
+        
+        border-radius: 4px;
+       padding-top: 0.9rem;
+       padding-right: 2.5rem;
+       padding-bottom: 0.9rem;
+       padding-left: 2.5rem;
+       text-align: top;
+       border: none;
+
+      }
+
+
+
+      .container1 {
+        display: none;
+        width: 325px;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 0px solid #ccc;
+        background-color: #79858582;
+        position: absolute;
+        top: 155px;
+        left: 585px;
+        font-size: 1.3em;
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.8em;
+        color: rgb(15, 16, 16);
+        text-decoration: underline;
+        
+      }
+      .input-container {
+        margin-bottom: 30px;
+      }
+      .input-container label {
+        display: block;
+        font-weight: bold;
+      }
+      .input-container input {
+        width: 93%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+      }
+      .input-container1 input[type="submit"] {
+        background-color: #007bffc7;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+
+
+      .close {
+        color: #efecec;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: rgb(15, 14, 14);
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .loginbtn{
+        position: absolute;
+        top: 16px;
+        left: 1420px;
+        color: rgba(13, 15, 13, 0.8);
+        width: 5em;
+        height: 2.5em;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color:#007bff;
+        border: none;
+
+      }
+
+      .loginbtn:hover {
+        color: #e8ece8;
+        text-decoration: underline;
+      }
+
+
+    
+
+
+    
+      
+  
+    </style>
+  </head>
+  <body>
+      
+    <div class="gfg">
+        <p class="header"></p>
+        
+      <img
+        src="images/HOME.png"
+        alt="Homepage image"
+        style="width: 100%"
+      />
+      <div class="first-txt">
+        
+        <a href="https:google.com" target="_blank">Google</a>
+        &nbsp; &nbsp;
+        <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
+          >CSS Validator</a
+        >
+        &nbsp; &nbsp;
+        <a href="https://validator.w3.org/" target="_blank"> HTML Validator</a>
+       
+    </div>
+    
+   
+
+
+    <div>
+        <p class="identifier"> MURALI TECHIE</p>
+        
+    </div>
+
+    <div>
+      <button class="loginbtn"  onclick="openLoginForm()">Login</button>
+    </div>
+
+    <div class="container1" id="loginModal">
+      <span class="close" onclick="closeLoginForm()">&times;</span>
+      <h2>Login</h2>
+      
+      <form action="login.php" method="POST">
+        <div class="input-container">
+          <label for="username">Username/Email:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-container">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="input-container1">
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </div>
+
+
+
+    <script>
+      // Function to open the login form modal
+      function openLoginForm() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "block";
+      }
+
+      // Function to close the login form modal
+      function closeLoginForm() {
+        var modal = document.getElementById("loginModal");
+        modal.style.display = "none";
+      }
+    </script>
+    
+
+     
+
+      
+  </body>
+</html>
