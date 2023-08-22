@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Murali Website</title>
+
+    <script>
+      function validatePassword() {
+          var password = document.getElementById("password").value;
+          
+          if (password.length < 8) {
+              alert("Password must be at least 8 characters long.");
+              return false;
+          }
+          
+          return true;
+      }
+    </script>
     <style>
       .gfg {
         margin: 0%;
@@ -239,7 +252,7 @@
       <span class="close" onclick="closeLoginForm()">&times;</span>
       <h2>Login</h2>
       
-      <form action="login.php" method="POST">
+      <form onsubmit="return validatePassword()" action="login.php" method="POST">
         <div class="input-container">
           <label for="username">Username/Email:</label>
           <input type="text" id="username" name="username" required />
