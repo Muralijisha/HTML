@@ -4,23 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Murali Website</title>
+    
+    <link rel="icon" type="image/png" href="Bruceleepng.png">
 
-    <script>
-      function validatePassword() {
-          var password = document.getElementById("password").value;
-          
-          if (password.length < 8) {
-              alert("Password must be at least 8 characters long.");
-              return false;
-          }
-          
-          return true;
-      }
-    </script>
+
     <style>
       .gfg {
-        margin: 0%;
+        margin: -1%;
         position: relative;
+        width: 101.5%;
       }
 
       .first-txt {
@@ -31,31 +23,18 @@
 
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 20px;
+        padding-top: 25px;
         padding-bottom: 20px;
         text-decoration: none;
         font-size: 1.1em;
       }
-      .second-txt{
-        position: absolute;
-        top: -50px;
-        left: 20px;
-        color: rgb(16 204 22 / 80%);
-
-        padding-left: 20px;
-        padding-right: 20px;
-        text-decoration: none;
-        font-size: 4.1em;
-        
-
-        
-      }
+      
 
       .identifier{
         position: absolute;
-        top: 50px;
-        left: 577px;
-        color: rgba(46, 15, 157, 0.974);
+        top: -27px;
+        left: 5px;
+        color: rgb(50 18 164 / 97%);
 
         padding-left: 20px;
         padding-right: 20px;
@@ -100,8 +79,8 @@
       }
 
       p.header { 
-        background-color: rgb(70 67 70);
-        padding-top: 15px;  
+        background-color: rgb(167 208 210);
+        padding-top: 33px;  
         padding-right: 10px;  
         padding-bottom: 50px;  
         padding-left: 100px;  
@@ -187,8 +166,8 @@
 
       .loginbtn{
         position: absolute;
-        top: 16px;
-        left: 1420px;
+        top: 25px;
+        left: 1440px;
         color: rgba(13, 15, 13, 0.8);
         width: 5em;
         height: 2.5em;
@@ -205,26 +184,37 @@
         text-decoration: underline;
       }
 
+      #homeimage{
+       
+            margin-top: -16px; /* Adjust this value to move the image up or down */
+        
+      }
 
-    
+     #leeicon{
+      position: absolute;
+      top: 17px;
+      left: 25px;
+     }
 
+     #imagehome{
+            margin-top: -16px; /* Adjust this value to move the image up or down */
+        
+     }
 
-    
       
-  
+
+
     </style>
   </head>
   <body>
       
     <div class="gfg">
         <p class="header"></p>
-        
-      <img
-        src="images/HOME.png"
-        alt="Homepage image"
-        style="width: 100%"
-      />
+        <a href="index.html">
+        <img src="images/Bruceleepng.png" alt="lee_logo" width="200px" height="44px" id="leeicon">
+      </a>
       <div class="first-txt">
+        
         
         <a href="https:google.com" target="_blank">Google</a>
         &nbsp; &nbsp;
@@ -235,14 +225,20 @@
         <a href="https://validator.w3.org/" target="_blank"> HTML Validator</a>
        
     </div>
+
+    
     
    
 
 
     <div>
-        <p class="identifier"> MURALI TECHIE</p>
+        <p class="identifier"> </p>
+        <img src="images/darkgif.gif" alt="Homepage image" id="imagehome" width="1526px">
+        
         
     </div>
+
+   
 
     <div>
       <button class="loginbtn"  onclick="openLoginForm()">Login</button>
@@ -252,20 +248,24 @@
       <span class="close" onclick="closeLoginForm()">&times;</span>
       <h2>Login</h2>
       
-      <form onsubmit="return validatePassword()" action="login.php" method="POST">
+      <form name="loginForm" id="loginForm" onsubmit="return validatePassword()" action="about.html" method="post">
         <div class="input-container">
           <label for="username">Username/Email:</label>
-          <input type="text" id="username" name="username" required />
+          <input type="text" id="username" name="username"  />
         </div>
         <div class="input-container">
           <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+          <input type="password" id="password" name="password"  />
         </div>
         <div class="input-container1">
           <input type="submit" value="Login" />
         </div>
       </form>
+
+      <div id="errorText" style="color: red;"></div>
     </div>
+
+   
 
 
 
@@ -281,11 +281,71 @@
         var modal = document.getElementById("loginModal");
         modal.style.display = "none";
       }
-    </script>
+    
+      // function validatePassword() {
+      //     var password = document.getElementById("password").value;
+      //     var username = document.getElementById("username").value;
+          
+          
+      //      if (password.length < 8) {
+      //         alert("Password must be at least 8 characters long.");
+      //         return false;
+      //     }
+
+      //     return true;
+      // }
+
+      const loginForm = document.getElementById("loginForm");
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");              
+      const errorText = document.getElementById("errorText");
+
+      // Simulated user data (replace with a database in a real application)
+      const validUsername = "user";
+      const validPassword = "password";
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const enteredUsername = usernameInput.value;
+        const enteredPassword = passwordInput.value;
+
+
+        // trim is used to remove the leading and trailing whitespacespace 
+
+        if (enteredUsername.trim() ==='' && enteredPassword.trim() ===''){
+          errorText.textContent = "*Enter the valid Username and Password";
+        }
+        
+        else if(enteredUsername.trim() ===''){
+          errorText.textContent = "*Enter the valid Username to login";
+        }
+
+        else if(enteredPassword.trim() ===''){
+          errorText.textContent = "*Enter the valid Password to login";
+        }
+        
+        else{
+
+        if (
+          enteredUsername.trim() === validUsername &&
+          enteredPassword.trim() === validPassword
+        ) {
+          errorText.textContent = "Login successful!";
+
+
+          //Redirecting to homepage 
+          window.location.href = "index.html";
+          // Redirect to a dashboard or perform other actions here.
+        } else {
+          errorText.textContent = "*Invalid username or password";
+        }
+      }});
     
 
      
-
+    </script>
+     
       
   </body>
 </html>

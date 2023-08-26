@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .container {
-        position: relative;
-        font-family: Arial;
-      }
-
-      .text-block {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background-color: blue;
-        color: white;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Example</title>
   </head>
   <body>
-    <h2>Image Text Blocks</h2>
-    <p>How to place text blocks over an image:</p>
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+    <div id="errorText" style="color: red"></div>
 
-    <div class="container">
-      <img src="images/homepagefinal.jpg" alt="Nature" style="width: 100%" />
-      <div class="text-block">
-        <h4>Nature</h4>
-        <p>What a beautiful sunrise</p>
-      </div>
-    </div>
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+      const errorText = document.getElementById("errorText");
+
+      // Simulated user data (replace with a database in a real application)
+      const validUsername = "user";
+      const validPassword = "password";
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const enteredUsername = usernameInput.value;
+        const enteredPassword = passwordInput.value;
+
+        if (
+          enteredUsername === validUsername &&
+          enteredPassword === validPassword
+        ) {
+          errorText.textContent = "Login successful!";
+          // Redirect to a dashboard or perform other actions here.
+        } else {
+          errorText.textContent = "Invalid username or password.";
+        }
+      });
+    </script>
   </body>
 </html>
-User Name:
-<input type="text" name="Name" />
-<br />
-<br />
-Password:
-<input type="text" name="Course" />
-<br /><br />
-<button class="btn">Login</button>
