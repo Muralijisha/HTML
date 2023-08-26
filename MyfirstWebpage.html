@@ -20,6 +20,7 @@
         top: 5px;
         right: 85px;
         color: rgb(247, 245, 245);
+        left: 1075px;
 
         padding-left: 20px;
         padding-right: 20px;
@@ -27,6 +28,7 @@
         padding-bottom: 20px;
         text-decoration: none;
         font-size: 1.1em;
+        
       }
       
 
@@ -65,6 +67,7 @@
       a:link {
         color: rgb(246, 246, 246);
         text-decoration: none;
+        
       }
       a:visited {
         color: #f8f8f8;
@@ -76,6 +79,7 @@
       }
       a:active {
         color: #2d9cb7;
+        
       }
 
       p.header { 
@@ -84,6 +88,7 @@
         padding-right: 10px;  
         padding-bottom: 50px;  
         padding-left: 100px;  
+        
       } 
       
       .btn{
@@ -109,9 +114,9 @@
         margin: 0 auto;
         padding: 20px;
         border: 0px solid #ccc;
-        background-color: #79858582;
+        background-color: #bac7c7db;
         position: absolute;
-        top: 155px;
+        top: 220px;
         left: 585px;
         font-size: 1.3em;
       }
@@ -147,11 +152,16 @@
         border: 0px solid #ccc;
         border-radius: 4px;
         font-size: 1em;
+        
+      }
+
+      .input-container1 input[type="submit"]:hover{
+        background: #0b6cd9;
       }
 
 
       .close {
-        color: #efecec;
+        color: #fffbfb;
         float: right;
         font-size: 28px;
         font-weight: bold;
@@ -182,6 +192,7 @@
       .loginbtn:hover {
         color: #e8ece8;
         text-decoration: underline;
+        background: #0b6cd9;
       }
 
       #homeimage{
@@ -215,7 +226,8 @@
       </a>
       <div class="first-txt">
         
-        
+        <a href="https:github.com" target="_blank">GitHub</a>
+        &nbsp; &nbsp;
         <a href="https:google.com" target="_blank">Google</a>
         &nbsp; &nbsp;
         <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
@@ -313,7 +325,7 @@
 
         // trim is used to remove the leading and trailing whitespacespace 
 
-        if (enteredUsername.trim() ==='' && enteredPassword.trim() ===''){
+        if (enteredUsername.trim() ==='' && enteredPassword ===''){
           errorText.textContent = "*Enter the valid Username and Password";
         }
         
@@ -321,7 +333,7 @@
           errorText.textContent = "*Enter the valid Username to login";
         }
 
-        else if(enteredPassword.trim() ===''){
+        else if(enteredPassword ===''){
           errorText.textContent = "*Enter the valid Password to login";
         }
         
@@ -329,7 +341,7 @@
 
         if (
           enteredUsername.trim() === validUsername &&
-          enteredPassword.trim() === validPassword
+          enteredPassword === validPassword
         ) {
           errorText.textContent = "Login successful!";
 
