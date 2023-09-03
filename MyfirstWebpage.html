@@ -28,6 +28,8 @@
         padding-bottom: 20px;
         text-decoration: none;
         font-size: 1.1em;
+
+        max-width: 100%;
         
       }
       
@@ -318,7 +320,9 @@
       function closeLoginForm() {
         var modal = document.getElementById("loginModal");
         modal.style.display = "none";
+        location.reload();               //Reload once we close the Login Form
       }
+      
     
       // function validatePassword() {
       //     var password = document.getElementById("password").value;
